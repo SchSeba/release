@@ -83,7 +83,7 @@ tests:
     cluster_profile: gcp
     test:
     - as: e2e-gcp-ovn-periodic
-      commands: make functests-on-ci
+      commands: SKIP_TESTS="ovs_qos" make functests-on-ci
       from: src
       resources:
         requests:
@@ -96,7 +96,7 @@ tests:
     cluster_profile: gcp
     test:
     - as: e2e-gcp-periodic
-      commands: make functests-on-ci
+      commands: SKIP_TESTS="ovs_qos" make functests-on-ci
       from: src
       resources:
         requests:
